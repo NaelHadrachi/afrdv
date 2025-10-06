@@ -1,10 +1,10 @@
 export default function Footer(){
-  const year = new Date().getFullYear()
+  const y = new Date().getFullYear()
   return (
-    <footer>
-      <div className="footer-inner">
-        <div>© {year} A French Rendez-vous — All rights reserved</div>
-        <div>Ottawa, Canada • <a href="mailto:AFrenchRDV@gmail.com">AFrenchRDV@gmail.com</a></div>
+    <footer className="footer">
+      <div className="container footrow">
+        <span>© {y} A French Rendez-vous</span>
+        <span>Ottawa, Canada — <a href="mailto:AFrenchRDV@gmail.com">AFrenchRDV@gmail.com</a></span>
       </div>
     </footer>
   )
