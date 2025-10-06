@@ -1,0 +1,8 @@
+.head{margin:26px 0 12px}
+.kicker{color:var(--brand);font-weight:600;margin:0 0 6px}
+.title{margin:0}
+.lede{color:var(--muted);max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}

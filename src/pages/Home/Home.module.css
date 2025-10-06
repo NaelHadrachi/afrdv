@@ -1,0 +1,11 @@
+.hero{padding:56px 0;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#f6faff 0,#fff 100%)}
+.kicker{color:var(--brand);font-weight:600;margin:0 0 6px}
+.title{margin:0 0 6px;font-size:clamp(28px,5vw,44px);line-height:1.08}
+.lede{color:var(--muted);max-width:62ch}
+.actions{display:flex;gap:10px;margin-top:14px}
+.btn{background:var(--brand);color:#fff;padding:10px 14px;border-radius:10px}
+.btnGhost{background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:10px}
+.tiles{list-style:none;padding:0;margin:22px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tiles li a{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);color:inherit}
+.tiles h3{margin:0 0 6px}
+@media(max-width:900px){.tiles{grid-template-columns:1fr}}
