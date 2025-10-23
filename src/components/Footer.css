@@ -1,0 +1,233 @@
+/* ====== VARIABLES ====== */
+:root {
+  --footer-bg: #1a1f36;
+  --footer-text: #e5e7eb;
+  --footer-text-light: #9ca3af;
+  --footer-border: #374151;
+  --footer-accent: #3b82f6;
+  --footer-hover: #60a5fa;
+}
+
+/* ====== FOOTER PRINCIPAL ====== */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  margin-top: auto;
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section principale */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  padding: 60px 0 40px 0;
+  border-bottom: 1px solid var(--footer-border);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-description {
+  color: var(--footer-text-light);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-link,
+.contact-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--footer-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  color: var(--footer-hover);
+}
+
+/* Liens de navigation */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.link-group h4 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.link-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-group a {
+  color: var(--footer-text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link-group a:hover {
+  color: var(--footer-hover);
+  transform: translateX(4px);
+}
+
+.link-group a::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--footer-accent);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-group a:hover::before {
+  opacity: 1;
+}
+
+/* Section basse */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-copyright {
+  color: var(--footer-text-light);
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--footer-border);
+  border-radius: 8px;
+  color: var(--footer-text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--footer-accent);
+  color: white;
+  border-color: var(--footer-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 968px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 0 30px 0;
+  }
+  
+  .footer-links {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main {
+    padding: 30px 0 20px 0;
+    gap: 30px;
+  }
+  
+  .footer-contact {
+    gap: 8px;
+  }
+  
+  .contact-link,
+  .contact-location {
+    font-size: 0.85rem;
+  }
+}
+
+/* Animation réduite */
+@media (prefers-reduced-motion: reduce) {
+  .link-group a,
+  .social-link,
+  .contact-link {
+    transition: none;
+    transform: none !important;
+  }
+}
