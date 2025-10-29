@@ -21,11 +21,7 @@ export default function Home() {
       title: 'Coaching Personnalisé', 
       subtitle: 'Accompagnement individualisé pour votre progression en français' 
     },
-    { 
-      image: '/images/home/6.png',         
-      title: 'Simulations d\'Examens', 
-      subtitle: 'Entraînez-vous dans les conditions réelles des épreuves ministérielles' 
-    },
+ 
     { 
       image: '/images/home/vignette6.jpg', 
       title: 'Méthodes Éprouvées', 
@@ -92,11 +88,13 @@ export default function Home() {
               aria-roledescription="slide"
               aria-label={`${i + 1} sur ${slides.length}`}
             >
-              <div 
-                className={s.slideImage}
-                style={{ backgroundImage: `url(${slide.image})` }}
-                aria-hidden="true"
-              />
+              <div className={s.imageContainer}>
+                <img 
+                  src={slide.image} 
+                  alt=""
+                  className={s.slideImage}
+                />
+              </div>
               <div className={s.slideOverlay} aria-hidden="true" />
               <div className={s.slideContent}>
                 <div className={s.contentWrapper}>
